@@ -2,18 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Cotton-Dandy</title>
+    <title>You're Too Tense</title>
     <meta name="description" content="You're a Teepee, You're a Wigwam">
-     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    
+   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-video-shader/master/dist/aframe-vid-shader.min.js"></script>
+
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <video id="video" src="reviewprison.mp4"
+        <video id="bbb" src="reviewprison.mp4"
                autoplay loop crossorigin></video>
       </a-assets>
 
-      <a-videosphere src="#video" rotation="0 180 0"></a-videosphere>
-    </a-scene>
+        <a-entity class="video" rotation="0 -90 0" geometry="primitive:sphere;radius:5000;" material="shader:video;src:#bbb;" scale="-1 1 1"></a-entity>
+  </a-scene>
   </body>
 </html>
